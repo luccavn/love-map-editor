@@ -25,9 +25,6 @@ function love.update(_dt)
 end
 
 function love.draw()
-	love.graphics.setColor(cursor_color)
-	love.graphics.draw(cursor, mouse_x-3, mouse_y-1)
-
 	love.graphics.setLineStyle("rough")
 
 	if show_grid then
@@ -44,4 +41,7 @@ function love.draw()
 		love.graphics.setColor(selection_color)
 		love.graphics.rectangle("line", selection_x, selection_y, grid_width, grid_height)
 	end
+
+	love.graphics.setColor(cursor_color)
+	love.graphics.draw(cursor, mouse_x-3, mouse_y-1)
 end
